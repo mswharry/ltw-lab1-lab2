@@ -1,0 +1,21 @@
+# Dependencies and generated output
+node_modules/
+build/
+coverage/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+
+# Starter archives; extracted source is tracked instead
+*.zip
+
+# Separate practice project outside the two labs
+learnreact/
+
+# Metadata from the starter archive and local IDE
+__MACOSX/
+.DS_Store
+._*
+.idea/

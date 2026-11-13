@@ -1,0 +1,17 @@
+.user-photos {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.photo-card {
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
+.photo-divider {
+    margin: 8px 0;
+}
+
+.photo-comment {
+    margin-bottom: 8px;
+}
