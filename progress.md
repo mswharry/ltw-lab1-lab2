@@ -23,3 +23,10 @@ Hoàn thành các yêu cầu chính ở mức cơ bản theo `Lab 1.docx` và `L
 
 1. Vào `Lab2/photo-sharing-server/photo-sharing-server`, sao chép `.env.example` thành `.env` rồi thay `DB_URL` bằng URI MongoDB của bạn. Chạy `npm install`, sau đó `node db/dbLoad.js` để nạp dữ liệu mẫu và `npm start` để mở API ở cổng 8081. **Lưu ý:** lệnh nạp dữ liệu xóa dữ liệu đang có trong các collection mẫu trước khi nạp lại.
 2. Vào `Lab1/photo-sharing-v1/photo-sharing-v1`, chạy `npm install` và `npm start` để mở giao diện ở `http://localhost:3000`. Giao diện mặc định gọi API ở `http://localhost:8081`; nếu API chạy ở nơi khác, đặt biến môi trường `REACT_APP_API_URL` trước khi chạy hoặc build.
+
+## Bản nộp StackBlitz dùng Vite
+
+- Tạo `stackblitz-submission` theo bố cục `/src`, `/public`, `/server` mà project mẫu yêu cầu, giữ hai lab gốc để đối chiếu. Frontend chuyển từ Create React App sang Vite, dùng proxy đến API cổng 8081 để chạy cùng một origin trong trình duyệt.
+- Server giữ các route MongoDB của Lab2 khi có `DB_URL`. Khi không có `DB_URL`, server dùng dữ liệu mẫu qua cùng các API để bản demo chạy trên StackBlitz; môi trường WebContainers không hỗ trợ kết nối TCP trực tiếp đến MongoDB. Hai chế độ này dùng chung giao diện.
+- Hướng dẫn chuyển các file vào bản fork, lệnh chạy và giới hạn của chế độ dữ liệu mẫu nằm trong `stackblitz-submission/README.md`.
+- Đã kiểm tra cú pháp frontend và server, đồng thời gọi thử API dữ liệu mẫu: 6 người dùng, trang chi tiết/ảnh hoạt động và ID sai trả 400. Việc cài dependencies và chạy build frontend trong bản Vite được để đến khi chuyển lên StackBlitz theo yêu cầu sau đó.
